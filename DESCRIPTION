@@ -1,6 +1,7 @@
 Package: Christian.Peralta.Rpackage
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Statistics' Project. This package contains tool to modify data frames as
+well as visualization functions
 Version: 0.1.0
 Author: Christian Peralta
 Maintainer: The package maintainer <yourself@somewhere.net>
