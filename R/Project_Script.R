@@ -20,6 +20,7 @@ save(MS, file = "Data/MS.RData")
 #' @param jump Numeric parameter, integer, to specify the length of each slice
 #' @param base Character parameter to name the slices, by default "Slice"
 #' @return Slices of the original data frame keeping some specific columns
+#' @example G.Slice(df = MS, fix.c.range1 = 1, fix.c.range2 = 5, init.pos = 6, jump = 10)
 
 G.Slice <- function(df, fix.c.range1, fix.c.range2, init.pos, jump, base= 'Slice'){
   stop.pos <- ncol(df)
@@ -43,6 +44,7 @@ G.Slice(df = MS, fix.c.range1 = 1, fix.c.range2 = 5, init.pos = 6, jump = 10)
 #' @export
 #' @param name Character parameter which is the pattern to look for the files to merge
 #' @return A single data frame which contains all the files specified
+#' @example Final_DF <- Mer.Slice(name = 'Slice_')
 
 Mer.Slice <- function(name){
   all.files_list <- list.files(pattern = name, full.names = T)
@@ -70,6 +72,7 @@ Final_DF <- Mer.Slice(name = 'Slice_')
 #' @param pcx Numeric parameter, integer, to specify which principal component one wants to display on x axis
 #' @param pcy Numeric parameter, integer, to specify which principal component one wants to display on y axis
 #' @return A graphical representation of the loading for the two principal components specified
+#' @example PCA.Function(df = Final_DF, col1 = 1, col2 = 5, tag = 'Sample', id =  'Maturation')
 
 PCA.Function <- function(df, col1, col2, tag, id, pcx=1, pcy=2){
   df1 <- df[,-c(col1:col2)]
@@ -86,7 +89,7 @@ PCA.Function(df = Final_DF, col1 = 1, col2 = 5, tag = 'Sample', id =  'Maturatio
 
 #' @title PC.Graph
 #' @description PC.Graph applies PCA onto a data frame from which obtains how many principal components (PC)
-#' are need to cover 97% of variability on the data. PCA.Function is designed for
+#' are needed to cover 97% of variability on the data. PCA.Function is designed for
 #' data frames where one needs to remove a range of columns. Moreover, generates the combination between
 #' those PCs and generates a plot for each combination which are gathered in a .pdf file.
 #' @export
@@ -96,6 +99,7 @@ PCA.Function(df = Final_DF, col1 = 1, col2 = 5, tag = 'Sample', id =  'Maturatio
 #' @param tag Character parameter which is a variable from the data frame that serves as tag on the plot
 #' @param id Character parameter which is a variable from the data frame that serves as color on the plot
 #' @return A PDF file which contains graphs for each combination of principal components that are needed
+#' @example PC.Graph(Final_DF, col1 = 1, col2 = 5, tag = "Sample", id = "Maturation")
 
 PC.Graph <- function(df, col1, col2, tag, id){
   df1 <- df[,-c(col1:col2)]
@@ -138,6 +142,7 @@ PC.Graph(Final_DF, col1 = 1, col2 = 5, tag = "Sample", id = "Maturation")
 #' @param pc2 Numeric parameter, integer, second principal component of interest
 #' @param tag Variable form the data frame which serves as label the data
 #' @return A dendrogram graph
+#' @example Clust.Function(df = Final_DF, col1 = 1, col2 = 5, tag = "Sample", pc1 = 1, pc2 = 23)
 
 Clust.Function <- function(df, col1, col2, tag, pc1, pc2){
   df1 <- df[,-c(col1:col2)]
@@ -150,8 +155,7 @@ Clust.Function <- function(df, col1, col2, tag, pc1, pc2){
        sub = 'Method "ward.D2" applied')
 }
 
-Clust.Function(df = Final_DF, col1 = 1, col2 = 5, tag = "Sample",
-               pc1 = 1, pc2 = 23)
+Clust.Function(df = Final_DF, col1 = 1, col2 = 5, tag = "Sample", pc1 = 1, pc2 = 23)
 
 
 #' @title Make.RF
@@ -161,9 +165,9 @@ Clust.Function(df = Final_DF, col1 = 1, col2 = 5, tag = "Sample",
 #' @param mtry.p Numeric parameter, integer, which refers to how many variables are taken into account each iteration of the analysis
 #' @param var.response Character parameter, is the variable response to settle the formula; a variable from the data frame
 #' @return Graph for a random forest model
+#' @example Make.RF(df = Final_DF[-1], mtry.p = 5, var.response = "Dose")
 
 Make.RF <- function(df, mtry.p, var.response){
-  #df$var.response <- as.factor(df[[var.response]])
   formula <- stats::formula(paste(var.response, '~.'))
   rfor1 <- randomForest::randomForest(data = df, formula, proximity = T,
                                       mtry = mtry.p, ntree = 1000)
