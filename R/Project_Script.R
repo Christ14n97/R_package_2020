@@ -1,5 +1,9 @@
 
-utils::data(MS)
+
+
+
+data(MS)
+
 
 
 #' @title G.Slice
@@ -29,7 +33,9 @@ G.Slice <- function(df, fix.c.range1, fix.c.range2, init.pos, jump, base= 'Slice
   Map(One.Slice, start.points)
 }
 
-G.Slice(df = MS, fix.c.range1 = 1, fix.c.range2 = 5, init.pos = 6, jump = 10)
+
+
+
 
 #' @title Mer.Slice
 #' @description Mer.Slice function merges two or more data frames into one
@@ -48,7 +54,9 @@ Mer.Slice <- function(name){
   Reduce(merge, all.df_list)
 }
 
-Final_DF <- Mer.Slice(name = 'Slice_')
+
+
+
 
 
 #' @title PCA.Function
@@ -76,7 +84,8 @@ PCA.Function <- function(df, col1, col2, tag, id, pcx=1, pcy=2){
                     y = pcy, max.overlaps = 40, frame = T)
 }
 
-PCA.Function(df = MS, col1 = 1, col2 = 5, tag = 'Sample', id =  'Maturation')
+
+
 
 
 #' @title PC.Graph
@@ -119,7 +128,8 @@ PC.Graph <- function(df, col1, col2, tag, id){
   grDevices::dev.off()
 }
 
-PC.Graph(df = MS, col1 = 1, col2 = 5, tag = "Sample", id = "Maturation")
+
+
 
 
 #' @title Clust.Function
@@ -134,6 +144,8 @@ PC.Graph(df = MS, col1 = 1, col2 = 5, tag = "Sample", id = "Maturation")
 #' @param pc2 Numeric parameter, integer, second principal component of interest
 #' @param tag Variable form the data frame which serves as label the data
 #' @return A dendrogram graph
+#' @examples
+#' Clust.Function(df = MS, col1 = 1, col2 = 5, tag = "Sample", pc1 = 1, pc2 = 23)
 
 
 Clust.Function <- function(df, col1, col2, tag, pc1, pc2){
@@ -147,7 +159,9 @@ Clust.Function <- function(df, col1, col2, tag, pc1, pc2){
        sub = 'Method "ward.D2" applied')
 }
 
-Clust.Function(df = MS, col1 = 1, col2 = 5, tag = "Sample", pc1 = 1, pc2 = 23)
+
+
+
 
 #' @title Make.RF
 #' @description Make.RF function generates MultiDimensional Scaling plot from a regression formula.
@@ -156,10 +170,10 @@ Clust.Function(df = MS, col1 = 1, col2 = 5, tag = "Sample", pc1 = 1, pc2 = 23)
 #' @param mtry.p Numeric parameter, integer, which refers to how many variables are taken into account each iteration of the analysis
 #' @param var.response Character parameter, is the variable response to settle the formula; a variable from the data frame
 #' @return Graph for a random forest model
-#' @examples
-#' Make.RF(df = MS[-1], mtry.p = 5, var.response = "Dose")
+
 
 Make.RF <- function(df, mtry.p, var.response){
+  df$var.response <- as.factor(df[[var.response]])
   formula <- stats::formula(paste(var.response, '~.'))
   rfor1 <- randomForest::randomForest(data = df, formula, proximity = T,
                                       mtry = mtry.p, ntree = 1000)
@@ -167,7 +181,7 @@ Make.RF <- function(df, mtry.p, var.response){
 }
 
 
-Make.RF(df = MS[-1], mtry.p = 5, var.response = "Dose")
+
 
 
 

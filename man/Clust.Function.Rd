@@ -27,3 +27,6 @@ Clust.Function carries a PCA analysis and generates a cluster dendrogram using
 by default the method 'ward.D2'. Clust.Function needs the number of principal components
 to be specified.
 }
+\examples{
+Clust.Function(df = MS, col1 = 1, col2 = 5, tag = "Sample", pc1 = 1, pc2 = 23)
+}
