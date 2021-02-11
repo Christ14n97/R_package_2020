@@ -26,3 +26,6 @@ Slices of the original data frame keeping some specific columns
 G.Slice creates slices from an original data frame, while keeps a specified number of
 columns, based on how many columns it has and writes them as '.csv' documents.
 }
+\examples{
+G.Slice(df = MS, fix.c.range1 = 1, fix.c.range2 = 5, init.pos = 6, jump = 10)
+}

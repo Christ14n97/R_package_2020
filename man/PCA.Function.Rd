@@ -29,3 +29,6 @@ PCA.Function applies PCA onto a data frame and generates a plot from the Princip
 Components of interest. PCA.Function is designed for data frames where one need
 to remove a range of columns.
 }
+\examples{
+PCA.Function(df = MS, col1 = 1, col2 = 5, tag = 'Sample', id =  'Maturation')
+}

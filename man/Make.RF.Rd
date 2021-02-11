@@ -19,3 +19,6 @@ Graph for a random forest model
 \description{
 Make.RF function generates MultiDimensional Scaling plot from a regression formula.
 }
+\examples{
+Make.RF(df = MS[-1], mtry.p = 5, var.response = "Dose")
+}

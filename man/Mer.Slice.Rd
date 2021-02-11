@@ -15,3 +15,6 @@ A single data frame which contains all the files specified
 \description{
 Mer.Slice function merges two or more data frames into one
 }
+\examples{
+Final_DF <- Mer.Slice(name = 'Slice_')
+}

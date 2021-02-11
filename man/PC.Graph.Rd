@@ -22,7 +22,10 @@ A PDF file which contains graphs for each combination of principal components th
 }
 \description{
 PC.Graph applies PCA onto a data frame from which obtains how many principal components (PC)
-are need to cover 97% of variability on the data. PCA.Function is designed for
+are needed to cover 97% of variability on the data. PCA.Function is designed for
 data frames where one needs to remove a range of columns. Moreover, generates the combination between
 those PCs and generates a plot for each combination which are gathered in a .pdf file.
+}
+\examples{
+PC.Graph(df = MS, col1 = 1, col2 = 5, tag = "Sample", id = "Maturation")
 }
