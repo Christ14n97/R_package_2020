@@ -1,3 +1,3 @@
 # R_package
 
-# Introduction
+## Introduction
