@@ -1,0 +1,32 @@
+
+
+#' Characterization of the metabolic effects of Trimethyltin on a 3D mini brain
+#' cell system data frame.
+#'
+#'
+#' The data frame comes from a toxicology study aiming to characterize the
+#' metabolic effects of Trimethyltin on a 3D mini brain cell system involving
+#' neurons and glial cells.
+#' The experimental factors include two maturation states (immature and mature),
+#' two exposure types (24 hours and 10 days) and three doses (0, 0.5 and 1 uM).
+#' Three biological replicates were considered for each combination of factors
+#' and 189 metabolites were measured.
+#'
+#' @docType data
+#'
+#' @format A data frame with 36 observations and 194 variables
+#'
+#' @usage data(MS)
+#'
+#' @keywords datasets
+#'
+#' @references Gonzalez-Ruiz, V., Schvartz, D., Sandstrom, J., Pezzatti, J.,
+#' Jeanneret, F., Tonoli, D., Boccard, J., Monnet-Tschudi, F., Sanchez, J. C.,
+#' & Rudaz, S. (2019). An integrative multi-omicsworkflow to address
+#' multifactorial toxicology experiments. Metabolites, 9(4), 1 – 15.
+#' (\href{https://doi.org/10.3390/metabo9040079}{Metabolites})
+#'
+#'
+#' @examples
+#' data(MS)
+"MS"
