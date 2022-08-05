@@ -45,5 +45,7 @@ In this part of my project I learn how to:
 3. Add dependencies
 4. Add data for testing
 
-An example can be seen in the following ![image](https://github.com/Christ14n97/R_package_2020/blob/master/images/package_dev_example.png)
+An example can be seen in the following image 
+
+![](https://github.com/Christ14n97/R_package_2020/blob/master/images/package_dev_example.png)
 
