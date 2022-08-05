@@ -12,9 +12,9 @@ The idea behind the project was to mimics as much as possible the role of a Data
 
 1. Data wrangling
 2. Function development
-3. Package development and deployment
+3. Package development and distribution
 
-For a quick reading of my project, you can refer to my [project report](https://github.com/Christ14n97/R_package_2020/blob/master/R-Project-on-Metabolomics-Dataset.pdf). If you want to test it, you can try downloading my [package](https://github.com/Christ14n97/R_package_2020/blob/master/Christian.Peralta.Rpackage_0.1.0.tar.gz) and installing it on your machine to test it.
+For an in depth reading of my project, you can refer to my [project report](https://github.com/Christ14n97/R_package_2020/blob/master/R-Project-on-Metabolomics-Dataset.pdf). If you want to test it, you can try downloading my [package](https://github.com/Christ14n97/R_package_2020/blob/master/Christian.Peralta.Rpackage_0.1.0.tar.gz) and installing it on your machine to test it.
 
 # Data wrangling
 
@@ -34,7 +34,16 @@ Moreover, the mindset applied was imagining that someone would use my functions 
 * specifying character separators when reading files
 * specifying column index or name
 
-# Package development and deployment
+# Package development and distribution
 
+The ultimate goal of the project was to give us hands-on experience on package development and software development tools such as git for version control. 
 
+In this part of my project I learn how to:
+
+1. Add my functions
+2. Properly document my functions
+3. Add dependencies
+4. Add data for testing
+
+An example can be seen in the following ![image](https://github.com/Christ14n97/R_package_2020/blob/master/images/package_dev_example.png)
 
