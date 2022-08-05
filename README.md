@@ -49,3 +49,9 @@ An example can be seen in the following image
 
 ![](https://github.com/Christ14n97/R_package_2020/blob/master/images/package_dev_example.png)
 
+# Conclusion
+
+Overall, this project was hihgly challenging but the reward was priceless. Since I finished my project I have never stopped using `Map()` functions and encouraging colleages in the field to invest time in understanding it. I have also used it in Python. 
+Furthermore, coupling git for version control whilst developping my package was a great experience to get started, and git absolutely helped me to check when a where I made a change which produced an bug.
+
+I am really thankfull to have followed this course, since now I feel confident on my programming skill in R.
