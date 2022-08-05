@@ -24,4 +24,17 @@ This was a great opportunity to understand **Map()** and **Reduce()** functions.
 
 # Function development
 
+The goal behind function development was clear: *"at this stage of the development of your career you cannot care about performance, you need to care about your functions work the way they are meant to do it"*.
+And that was the way I proceed, focusing my learning in understanding R and the global enviroment, as well as function local environment.
+
+Moreover, the mindset applied was imagining that someone would use my functions and what kind of need they might face, namely:
+
+* output rename
+* reading several input files from a working directory
+* specifying character separators when reading files
+* specifying column index or name
+
+# Package development and deployment
+
+
 
