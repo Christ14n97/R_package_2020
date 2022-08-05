@@ -6,5 +6,5 @@ On autumn 2020, I followed *Statistics and Probability* course given by the Facu
 
 A part of the course was an R-project where we were tought how to leverage R programming language, starting by making use of its functional programming properties. This approach challenged me, as I was used to Python programming language and it forced me to change my mindset. However, the effort was totally worthy.
 
-To get initiated with the project, we had to choose a dataset to start coding, I choosed a metabolomics dataset comming from a toxicology study aming at characterize the metabolic effect of Trimethyltin on a 3D "mini-brain" cell system invilving neurons and glial cells [Ref (https://doi.org/10.3390/metabo9040079).
+To get initiated with the project, we had to choose a dataset to start coding, I choosed a metabolomics dataset comming from a toxicology study aming at characterize the metabolic effect of Trimethyltin on a 3D "mini-brain" cell system invilving neurons and glial cells [Ref] (https://doi.org/10.3390/metabo9040079).
 
